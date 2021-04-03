@@ -23,5 +23,27 @@ print(hours, "час", minutes, "мин", seconds, "сек")
 
 days = hours // 24
 hours = hours - days * 24
-print(days,"д",hours, "час", minutes, "мин", seconds, "сек")
+print(days, "д", hours, "час", minutes, "мин", seconds, "сек")
 
+weeks = days // 7
+days = days - weeks * 7
+print(weeks, "нед", days, "д", hours, "час", minutes, "мин", seconds, "сек")
+
+months = int(weeks // 4.3333)
+weeks = int(weeks - months * 4.3333)
+print(months, "мес", weeks, "нед", days, "д", hours, "час", minutes, "мин", seconds, "сек")
+
+years = months // 12
+months = months - years * 12
+print(years, "г", months, "мес", weeks, "нед", days, "д", hours, "час", minutes, "мин", seconds, "сек")
+
+# Пример вывода:
+#
+# Введите время в секундах: 456789123
+# 456789123 сек
+# 7613152 мин 3 сек
+# 126885 час 52 мин 3 сек
+# 5286 д 21 час 52 мин 3 сек
+# 755 нед 1 д 21 час 52 мин 3 сек
+# 174 мес 1 нед 1 д 21 час 52 мин 3 сек
+# 14 г 6 мес 1 нед 1 д 21 час 52 мин 3 сек
