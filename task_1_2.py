@@ -2,7 +2,6 @@
 
 cube_of_odd_numbers_list = []
 count = 0
-
 for number_1 in range(1001):
     if number_1 % 2 != 0:
         cube_of_odd_numbers_list.append(number_1**3)

@@ -29,8 +29,8 @@ weeks = days // 7
 days = days - weeks * 7
 print(weeks, "нед", days, "д", hours, "час", minutes, "мин", seconds, "сек")
 
-months = int(weeks // 4.3333)
-weeks = int(weeks - months * 4.3333)
+months = int(weeks // 4.33)
+weeks = int(weeks - months * 4.33)
 print(months, "мес", weeks, "нед", days, "д", hours, "час", minutes, "мин", seconds, "сек")
 
 years = months // 12
