@@ -36,10 +36,10 @@ for index_number in temp_index_list:
 
 print(some_list)
 
-
 # Сформировать из обработанного списка строку:
 # в "05" часов "17" минут температура воздуха была "+05" градусов
 
 some_string = ' '.join(some_list)
-
 print(some_string)
+
+# Считается ли список с индексами как создание списка?
