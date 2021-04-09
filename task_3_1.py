@@ -15,4 +15,4 @@ def num_name_transl(same_word):
                       'six': 'шесть', 'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
     return num_dictionary.get(same_word)
 
-print(num_name_transl('te'))
+print(num_name_transl('ten'))
