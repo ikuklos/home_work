@@ -4,7 +4,6 @@
 # "Один"
 # >>> num_translate_adv("two")
 # "два"
-#
 
 def num_name_transl(same_word):
     # same_word = str(same_word)
