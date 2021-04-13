@@ -25,7 +25,7 @@ thesaurus("Иван", "Мария", "Петр", "Илья")
 # Как поступить, если потребуется сортировка по ключам?
 # Можно ли использовать словарь в этом случае?
 
-def thesaurus(*args, key_sort = 'no'):
+def thesaurus(key_sort = 'no', *args):
     dict_thesaurus = {}
     if key_sort != 'yes':
         for word in args:
@@ -33,6 +33,12 @@ def thesaurus(*args, key_sort = 'no'):
                 dict_thesaurus[word[0]] = [word]
             else:
                 dict_thesaurus[word[0]] += [word]
+    else:
+        for word in args:
+            if word not in dict_thesaurus:
+                dict_thesaurus[word] = [word[0]]
+            else:
+                dict_thesaurus[word] += [word[0]]
     print(dict_thesaurus)
 
-thesaurus("Иван", "Мария", "Петр", "Илья")
+thesaurus('yes', "Иван", "Мария", "Петр", "Илья")
