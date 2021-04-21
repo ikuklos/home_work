@@ -5,12 +5,10 @@ src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 # Подсказка: использовать возможности python, изученные на уроке.
 # Подумайте, как можно сделать оптимизацию кода по памяти, по скорости.
 
-result = (priveus_number for num in src if src.index(num) > 0) < (priveus_number for num in src if src.index(num) > 0)
-
-print(result)
-
 result = [
-    number for number in src if src.index(number) > 0 and src.index(number) <= len(src) and number > src[next(index - 1 for index in range(len(src)))]
+
+sorted_number for index, sorted_number in enumerate(src) if sorted_number != src[0] and sorted_number > src[index - 1]
+
 ]
 
 print(result)
