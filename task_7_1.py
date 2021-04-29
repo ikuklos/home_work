@@ -12,15 +12,13 @@
 #
 
 import os
-starter_directories = {'my_project_task_7_1' : ['settings', 'mainapp', 'adminapp', 'authapp']}
-print(starter_directories)
+
+starter_directories = {'my_project_7_1' : ['settings', 'mainapp', 'adminapp', 'authapp']}
 for key in starter_directories:
-    print('|--' + key)
     if not os.path.exists(key):
         os.mkdir(key)
     os.chdir(key)
     for val in starter_directories[key]:
-        print('   |--' + val)
         if not os.path.exists(val):
             os.mkdir(val)
 
