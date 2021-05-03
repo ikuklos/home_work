@@ -22,9 +22,6 @@ for root, dir, files in os.walk('my_project'):
         all_sizes.append(os.stat(root+'/'+file).st_size)
         if os.stat(root+'/'+file).st_size > max_file_size:
             max_file_size = os.stat(root+'/'+file).st_size
-#         extens = [file.rsplit('.', maxsplit=1)[-1].lower()]
-#         print(extens)
-#         rel_path = os.path.relpath(os.path.join(root, file), start_exploring)
 
 while start_point/10 <= max_file_size:
     dir_struct[start_point] = []
@@ -35,7 +32,6 @@ for size in all_sizes:
         if size <= key:
             dir_struct[key].append(size)
             break
-            # all_sizes.remove(size)
 
 for key in dir_struct:
     dir_struct[key] = len(dir_struct[key])
