@@ -15,10 +15,10 @@
 # можете ли вы вывести тип значения функции?
 # Сможете ли решить задачу для именованных аргументов?
 # Сможете ли вы замаскировать работу декоратора?
-
-
+import functools
 
 def type_loger(function):
+    functools.wraps(function)
     def type_logger(*args):
         if len(args) > 0:
             for element in args:

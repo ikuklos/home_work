@@ -26,7 +26,7 @@ def val_checker(some_function_check):
             if some_function_check(args[0]):
                 return function(args[0])
             else:
-                raise ValueError
+                raise ValueError(f'wrong value {args[0]}')
         return type_logger
     return inside_val_checker
 
