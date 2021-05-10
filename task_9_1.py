@@ -38,7 +38,7 @@ class TrafficLight:
     #         sleep(0.5)
 
 
-avenue_7 = TrafficLight()
+avenue_7 = TrafficLight
 
 
 avenue_7.running()
