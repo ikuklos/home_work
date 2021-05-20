@@ -9,5 +9,28 @@
 # Проверить работу этих методов на реальных данных.
 # Выполнить общий подсчёт расхода ткани. Проверить на практике полученные на этом уроке знания.
 # Реализовать абстрактные классы для основных классов проекта и проверить работу декоратора @property
+import abc
 
-class Cloath
+class Clothes(abc.ABC):
+
+    def __init__(self, size):
+        self.size = size
+
+    @abc.abstractmethod
+    def cloth_calculate(self):
+        pass
+
+class Coat(Clothes):
+    def cloth_calculate(self):
+        print(self.size/6.5 + 0.5)
+
+test_coat = Coat
+test_coat(13).cloth_calculate()
+
+
+class Suit(Clothes):
+    def cloth_calculate(self):
+        return (2*self.size + 0.3)
+
+test_suit = Suit
+print(test_suit(5).cloth_calculate())
