@@ -72,17 +72,18 @@ class LotaGame:
         for num in random_game_number:
             print(self.human_player)
             print(self.computer_player)
-            print('Выпало число: ', num)
+            print(f'Сейчас счет: {self.human_player._numbers_stroked} - {self.computer_player._numbers_stroked}')
+            print(f'Выпало число: {num}, осталось чисел - {90 - (random_game_number.index(num)+1)}')
             decide = input('Зачеркиваем? Y/N ')
             while True:
-                if decide == 'Y':
+                if decide == 'Y' or decide == 'y':
                     if not self.human_player.has_number(num):
                         raise Exception(f'{self.human_player} Вы пытаетесь зачеркнуть номер которого у Вас нет!')
                     self.human_player.try_stoke_number(num)
                     break
-                elif decide == 'N':
+                elif decide == 'N' or decide == 'n':
                     if self.human_player.has_number(num):
-                        raise Exception(f'{self.human_player} Вы проглядели цифру в карточке!')
+                        raise Exception(f'{self.human_player} Вы проглядели номер в карточке!')
                     break
             self.computer_player.try_stoke_number(num)
 
@@ -94,3 +95,4 @@ computer_player = LotoCard('Компьютер')
 game = LotaGame(human_player, computer_player)
 game.start()
 
+# Иван, спасибо за занятия, Вы пока лучший преподаватель которого я встречал на GB.
