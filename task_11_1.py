@@ -73,8 +73,8 @@ class LotaGame:
             print(self.human_player)
             print(self.computer_player)
             print(f'Сейчас счет: {self.human_player._numbers_stroked} - {self.computer_player._numbers_stroked}')
-            print(f'Выпало число: {num}, осталось чисел - {90 - (random_game_number.index(num)+1)}')
-            decide = input('Зачеркиваем? Y/N ')
+            print(f'Новый бочонок: {num}, (осталось {90 - (random_game_number.index(num)+1)})')
+            decide = input('Зачеркнуть цифру? Y/N ')
             while True:
                 if decide == 'Y' or decide == 'y':
                     if not self.human_player.has_number(num):
